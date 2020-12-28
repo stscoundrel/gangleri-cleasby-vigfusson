@@ -1,0 +1,24 @@
+{
+  "name": "gangleri-cleasby-vigfusson",
+  "description": "Walk through Cleasby & Vigfusson sitemap with Gangleri",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/stscoundrel/gangleri-cleasby-vigfusson.git",
+  "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "gangleri": "^1.0.0"
+  },
+  "devDependencies": {}
+}
