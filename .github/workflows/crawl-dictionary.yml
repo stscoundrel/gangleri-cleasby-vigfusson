@@ -1,6 +1,7 @@
 name: Crawl dictionary sitemap
 
 on:
+  pull_request:
   schedule:
     - cron:  '0 0 * * *'
 
@@ -9,16 +10,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: 14.x
-
     steps:
     - uses: actions/checkout@v2
-    - name: Crawl Dictionary with Node ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Crawl Dictionary sitemap
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '14'
     - run: yarn install
     - run: yarn start
       env:
